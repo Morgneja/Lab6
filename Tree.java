@@ -50,13 +50,19 @@ class Tree {
     return leafColor;
   }
 
-  public void print(){
-   if  (leavesFall = true){
-    System.out.println("This is a " +treeName + "tree." + "It is a " +treeType + " and its leaves are currently " +leafColor + "." + "It does not lose its leaves for the winter.");
-   }
-if (leavesFall = false){
-   System.out.println("This is a " +treeName + "tree." + "It is a " +treeType + " and its leaves are currently " +leafColor + "." + "It does lose its leaves for the winter.");
-   }
-   }
-    
+  String getLeavesFall() {
+    if (leavesFall) {
+      return "does";
+    } else {
+      return "does not";
+    }
   }
+
+  void print() {
+
+    System.out.println("This is a " + GetTreeName() + "tree." + "It is a " + GetTreeType() + " and its leaves are currently "
+        + GetLeafColor() + "." + "It " + getLeavesFall() + " lose its leaves for the winter.");
+
+  }
+
+}
